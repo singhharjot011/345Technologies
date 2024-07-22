@@ -4,91 +4,291 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
     <link rel="icon" href="src/img/345.png" type="image/icon type" />
     <title>345 Technologies - We Bring Ideas to Life</title>
-    <link href="./src/output.css" rel="stylesheet" />
-    <script src="script.js" defer></script>
+    <link href="./output.css" rel="stylesheet" />
+    <script defer src="script.js"></script>
   </head>
-  <body class="bg-light bg-opacity-35">
-    <section
-      id="hero"
-      class="text-blackAlternate w-full px-2 sm:px-16 roboto min-h-[460px] sm:min-h-[550px] md:min-h-[630px] lg:min-h-[800px] xl:min-h-[850px] 2xl:min-h-[1000px]"
+  <body class="bg-lighter">
+    <header
+      class="h-16 flex justify-between w-full text-center px-8 md:px-16 py-4"
     >
-      <div class="flex flex-col w-full">
-        <nav
-          id="nav-menu"
-          class="flex justify-between items-center py-4 px-6 overflow-hidden mb-6"
+      <!-- Logo -->
+      <div class="flex gap-1 items-center">
+        <img class="h-8" src="./public/assets/img/logo/logo.png" alt="" /><span
+          class="text-stone-800 font-semibold text-nowrap"
+          >rban Web Pixels</span
         >
-          <div class="flex flex-col items-center">
-            <img
-              class="h-7 md:h-12 object-contain"
-              src="./src/img/345.png"
-              alt=""
-            />
-          </div>
-          <div class="hidden md:flex space-x-4 lg:space-x-10 text-xl">
-            <span class="hover:underline flex lato items-center" id="nav-item"
-              >Services<span class="arrow"><span></span><span></span></span>
-            </span>
+      </div>
 
-            <span class="hover:underline flex lato" id="nav-item"
-              >Our Work
-            </span>
+      <!-- Navbar -->
+      <ul
+        id="navbar-links-menu"
+        class="w-full flex items-center justify-center space-x-12 text-stone-800 font-semibold"
+      >
+        <li>
+          <a href="index.html" class="nav-link hover:text-stone-500">Home</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link hover:text-stone-500">Work</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link hover:text-stone-500">About</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link hover:text-stone-500">Services</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link text-nowrap hover:text-stone-500"
+            >Contact</a
+          >
+        </li>
+      </ul>
 
-            <span class="hover:underline flex lato" id="nav-item">Blog </span>
-            <div class="flex items-center">
-              <span class="hover:underline lato" id="nav-item">About </span>
-              <span class="arrow"><span></span><span></span></span>
-            </div>
-          </div>
-          <button
-            class="hover:scale-105 rounded-full p-2 px-4 text-xs md:text-base h-min bg-gradient-to-br from-darkText to-primary text-light"
+      <!-- Buttons -->
+      <button
+        aria-label="get-quote"
+        class="px-2 py-1/2 rounded-full backdrop-blur-lg backdrop-opacity-70 border border-stone-800 text-stone-800 flex items-center gap-2 hover:bg-stone-800 hover:text-stone-100 group active:scale-95"
+      >
+        <span class="text-nowrap"> Get Quote</span>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+          class="h-4 w-4 fill-stone-800 group-hover:fill-stone-100"
+        >
+          <path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" />
+        </svg>
+      </button>
+    </header>
+
+    <!-- Hero Section -->
+
+    <section id="hero">
+      <!-- Slogan -->
+      <div class="flex w-full px-8 md:px-16 py-4">
+        <div class="w-4/5 flex justify-center items-center">
+          <h2
+            class="tracking-wide leading-relaxed text-2xl sm:text-4xl lg:text-5xl xl:text-6xl text-stone-800 w-full"
           >
-            Get Quote
-          </button>
-        </nav>
-        <div class="flex">
-          <div
-            class="w-4/5 flex flex-col justify-center 2xl:text-6xl xl:text-5xl md:text-4xl text-2xl text-start text-transparent bg-clip-text bg-gradient-to-br from-blackAlternate to-primary sm:space-y-3"
-          >
-            <span class="">Creating Your Digital Footprints, </span
-            ><span>brands & experience</span>
-          </div>
-          <div class="flex justify-end w-1/5 p-0">
-            <img
-              class="max-h-16 sm:max-h-40"
-              src="./src/img/small-rounded.png"
-              alt=""
-            />
-          </div>
+            Designs That Inspire,<br class="lg:hidden" />
+            Captivate & Convert
+          </h2>
         </div>
-        <div class="flex relative justify-end">
+        <div class="relative h-36 lg:h-44 w-[288px]">
+          <!-- Images -->
           <div
-            class="flex flex-col justify-center items-center object-cover w-full absolute z-0 lg:mt-2 xl:mt-0"
+            class="absolute z-10 h-full w-full rounded-[40px] overflow-hidden"
           >
-            <img class="w-full" src="./src/img/Designers-rounded.png" alt="" />
+            <img
+              class="object-cover h-full w-full"
+              src="./src/img/img1.jpg"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="absolute z-30 bottom-0 h-[100px] w-full rounded-[40px] overflow-hidden"
+          >
+            <img
+              class="object-cover h-44 w-full transform -translate-y-[76px]"
+              src="./src/img/img1.jpg"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="absolute z-30 bottom-0 h-[112px] lg:h-[130px] w-1/2 right-0 rounded-[40px] overflow-hidden"
+          >
             <div
-              class="block sm:hidden sm:w-44 lg:w-64 xl:w-72 z-10 lg:mt-7 text-center"
+              class="w-[288px] transform -translate-y-[34px] lg:-translate-y-[46px] -translate-x-1/2"
             >
-              <span
-                class="text-xs md:text-xs lg:text-lg xl:text-xl text-darkText"
-                >Lets Boost your Brand to stand out and make a positive
-                impact</span
-              >
+              <img
+                class="object-cover h-36 lg:h-44 w-full"
+                src="./src/img/img1.jpg"
+                alt=""
+              />
             </div>
           </div>
 
-          <div class="hidden sm:block w-44 lg:w-64 xl:w-72 z-10 lg:mt-7">
-            <span class="text-xs md:text-xs lg:text-lg xl:text-xl text-darkText"
-              >Lets Boost your Brand to stand out and make a positive
-              impact</span
+          <div
+            class="absolute z-30 bottom-0 h-full w-32 rounded-[40px] transform translate-x-[74px] overflow-hidden"
+          >
+            <div class="w-[264px] transform -translate-x-[74px]">
+              <img
+                class="object-cover h-36 lg:h-44 w-full"
+                src="./src/img/img1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <!-- White Boxes -->
+          <div
+            class="absolute z-20 bg-lighter top-0 right-0 h-16 md:w-10 lg:w-24 rounded-bl-[60px]"
+          ></div>
+
+          <div class="absolute z-20 bg-lighter top-0 left-0 h-8 w-full"></div>
+
+          <div
+            class="absolute z-20 bg-lighter top-0 left-0 h-14 lg:h-20 w-[84px] rounded-br-[60px]"
+          ></div>
+
+          <div class="absolute z-20 bg-lighter top-0 left-0 h-32 w-7"></div>
+          <div class="absolute z-20 bg-lighter top-0 right-0 h-32 w-7"></div>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="w-full h-72 md:h-96 xl:h-[450px] px-8 md:px-16 py-4">
+        <div class="relative w-full h-full overflow-hidden">
+          <!-- Background Img -->
+          <div
+            class="absolute z-10 inset-0 w-full h-full rounded-[60px] overflow-hidden"
+          >
+            <img
+              class="w-full h-full object-cover"
+              src="./src/img/img1.jpg"
+              alt=""
+            />
+          </div>
+
+          <!-- Left Image Overlay -->
+          <div
+            class="absolute z-30 top-0 left-0 w-[calc(100%-140px)] md:w-[calc(100%-240px)] lg:w-[calc(100%-281px)] h-full rounded-[60px] overflow-hidden"
+          >
+            <div
+              class="h-full w-[calc(100%+140px)] md:w-[calc(100%+240px)] lg:w-[calc(100%+281px)]"
             >
+              <img
+                class="h-full w-full object-cover"
+                src="./src/img/img1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <!-- Bottom  Image Overlay -->
+
+          <div
+            class="absolute z-40 bottom-0 right-0 w-full h-[calc(100%-80px)] rounded-[60px] overflow-hidden"
+          >
+            <div class="h-[calc(100%+80px)] w-full">
+              <img
+                class="h-full w-full object-cover transform -translate-y-20"
+                src="./src/img/img1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <!-- White Boxes -->
+          <div
+            class="absolute z-20 bg-lighter top-0 right-0 h-20 w-[147px] md:w-[247px] lg:w-[288px] rounded-bl-[60px]"
+          ></div>
+
+          <div
+            class="absolute z-20 bg-lighter top-0 right-0 h-10 w-96 rounded-bl-[60px]"
+          ></div>
+
+          <div
+            class="absolute z-20 bg-lighter top-0 right-0 h-40 w-20 rounded-bl-[60px]"
+          ></div>
+
+          <!-- Tagline -->
+
+          <div
+            class="absolute z-20 top-0 right-0 h-20 w-[140px] md:w-[240px] lg:w-[280px] flex text-stone-700 items-center justify-center text-xs md:text-sm xl:text-base 2xl:text-lg"
+          >
+            <p class="flex gap-1 justify-around">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 fill-stone-700"
+                viewBox="0 -960 960 960"
+              >
+                <path
+                  d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                />
+              </svg>
+
+              We are professionals delivering innovative solutions
+            </p>
+          </div>
+
+          <!-- Adjectives -->
+          <div
+            class="z-50 w-1/2 md:w-1/3 lg:w-1/4 absolute bottom-5 left-10 flex flex-wrap gap-1 text-xs md:text-base xl:text-xl font-thin"
+          >
+            <div
+              class="flex items-center px-2 py-1/2 rounded-full bg-white text-stone-800"
+            >
+              Innovative
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 fill-stone-800"
+                viewBox="0 -960 960 960"
+              >
+                <path
+                  d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                />
+              </svg>
+            </div>
+            <div
+              class="px-2 bg-stone-400/20 py-1/2 rounded-full backdrop-blur-lg backdrop-opacity-70 border border-white text-white flex items-center"
+            >
+              Versatile
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 fill-white"
+                viewBox="0 -960 960 960"
+              >
+                <path
+                  d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                />
+              </svg>
+            </div>
+            <div
+              class="px-2 bg-stone-400/20 py-1/2 rounded-full backdrop-blur-lg backdrop-opacity-70 border border-white text-white flex items-center"
+            >
+              Agile
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 fill-white"
+                viewBox="0 -960 960 960"
+              >
+                <path
+                  d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                />
+              </svg>
+            </div>
+            <div
+              class="px-2 bg-stone-400/20 py-1/2 rounded-full backdrop-blur-lg backdrop-opacity-70 border border-white text-white flex items-center"
+            >
+              Reliable
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 fill-white"
+                viewBox="0 -960 960 960"
+              >
+                <path
+                  d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                />
+              </svg>
+            </div>
+            <div
+              class="px-2 bg-stone-400/20 py-1/2 rounded-full backdrop-blur-lg backdrop-opacity-70 border border-white text-white flex items-center"
+            >
+              Dynamic
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 fill-white"
+                viewBox="0 -960 960 960"
+              >
+                <path
+                  d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -418,12 +618,46 @@
         class="flex flex-col sm:flex-row sm:mt-20 justify-between py-4 px-6 space-y-2 sm:space-y-0 sm:space-x-4"
       >
         <div class="md:w-1/3 hover:scale-95 cursor-pointer">
-          <a target="main" href="https://tailwindimmigration.netlify.app/"
-            ><img
-              class="object-contain"
-              src="./src/img/portfolio/immigration.png"
-              alt=""
-          /></a>
+          <div class="w-full h-96 p-6">
+            <div class="relative w-full h-full overflow-hidden rounded-[60px]">
+              <img
+                src="./src/img/img1.jpg"
+                class="z-10 absolute inset-0 object-cover w-full"
+                style="height: calc(100% - 5rem); width: calc(100% - 5rem)"
+                alt=""
+              />
+              <div
+                class="z-40 rounded-br-[60px] absolute top-0 left-0 h-full bg-transparent content-normal overflow-hidden"
+                style="width: calc(100% - 9rem)"
+              >
+                <img
+                  src="./src/img/img1.jpg"
+                  class="absolute top-0 left-0 object-cover h-full"
+                  style="width: calc(100% + 288px)"
+                  alt=""
+                />
+              </div>
+              <div
+                class="z-30 rounded-br-[60px] absolute top-0 left-0 w-full bg-transparent content-normal overflow-hidden"
+                style="height: calc(100% - 9rem)"
+              >
+                <img
+                  src="./src/img/img1.jpg"
+                  class="absolute inset-0 object-cover w-full"
+                  style="height: calc(100% + 9rem)"
+                  alt=""
+                />
+              </div>
+
+              <div
+                class="z-40 rounded-tl-[60px] absolute bottom-0 right-0 h-36 w-36 bg-white content-normal"
+              ></div>
+
+              <div
+                class="z-20 rounded-br-[60px] absolute bottom-0 right-36 h-36 w-36 bg-white content-normal"
+              ></div>
+            </div>
+          </div>
         </div>
         <div class="md:w-1/3 hover:scale-95 cursor-pointer">
           <a target="main1" href="https://itmsp.netlify.app/"
