@@ -64,9 +64,9 @@
 
     <!-- Hero Section -->
 
-    <section id="hero">
+    <section id="hero" class="sm:px-16 xl:px-32 2xl:px-42">
       <!-- Slogan -->
-      <div class="flex w-full px-8 md:px-16 py-4">
+      <div class="flex w-full py-4">
         <div class="w-4/5 flex justify-center items-center">
           <h2
             class="tracking-wide leading-relaxed text-2xl sm:text-4xl lg:text-5xl xl:text-6xl text-stone-800 w-full"
@@ -75,7 +75,7 @@
             Captivate & Convert
           </h2>
         </div>
-        <div class="relative h-36 lg:h-44 w-[288px]">
+        <div class="relative h-36 lg:h-44 w-[240px] lg:w-[288px]">
           <!-- Images -->
           <div
             class="absolute z-10 h-full w-full rounded-[40px] overflow-hidden"
@@ -88,23 +88,23 @@
           </div>
 
           <div
-            class="absolute z-30 bottom-0 h-[100px] w-full rounded-[40px] overflow-hidden"
+            class="absolute z-30 bottom-0 h-[82px] lg:h-[100px] w-full rounded-[40px] overflow-hidden"
           >
             <img
-              class="object-cover h-44 w-full transform -translate-y-[76px]"
+              class="object-cover h-36 lg:h-44 w-full transform -translate-y-[62px] lg:-translate-y-[76px]"
               src="./src/img/img1.jpg"
               alt=""
             />
           </div>
 
           <div
-            class="absolute z-30 bottom-0 h-[112px] lg:h-[130px] w-1/2 right-0 rounded-[40px] overflow-hidden"
+            class="absolute z-30 bottom-0 h-[82px] lg:h-[114px] w-1/2 right-0 rounded-[40px] overflow-hidden"
           >
             <div
-              class="w-[288px] transform -translate-y-[34px] lg:-translate-y-[46px] -translate-x-1/2"
+              class="h-36 lg:h-44 w-[200%] transform -translate-x-1/2 -translate-y-[62px]"
             >
               <img
-                class="object-cover h-36 lg:h-44 w-full"
+                class="object-cover h-full w-full"
                 src="./src/img/img1.jpg"
                 alt=""
               />
@@ -112,11 +112,13 @@
           </div>
 
           <div
-            class="absolute z-30 bottom-0 h-full w-32 rounded-[40px] transform translate-x-[74px] overflow-hidden"
+            class="absolute z-30 top-0 left-[46px] lg:left-[82px] w-[calc(100%-88px)] lg:w-[calc(100%-170px)] h-full overflow-hidden rounded-3xl"
           >
-            <div class="w-[264px] transform -translate-x-[74px]">
+            <div
+              class="w-[calc(100%+88px)] lg:w-[calc(100%+170px)] h-full overflow-hidden transform -translate-x-[46px] lg:-translate-x-[82px]"
+            >
               <img
-                class="object-cover h-36 lg:h-44 w-full"
+                class="object-cover h-full w-full"
                 src="./src/img/img1.jpg"
                 alt=""
               />
@@ -125,13 +127,13 @@
 
           <!-- White Boxes -->
           <div
-            class="absolute z-20 bg-lighter top-0 right-0 h-16 md:w-10 lg:w-24 rounded-bl-[60px]"
+            class="absolute z-20 bg-lighter top-0 right-0 h-[calc(100%-70px)] lg:h-[calc(100%-112px)] w-11 lg:w-24 rounded-bl-[60px]"
           ></div>
 
-          <div class="absolute z-20 bg-lighter top-0 left-0 h-8 w-full"></div>
+          <div class="absolute z-20 bg-lighter top-0 w-full h-8"></div>
 
           <div
-            class="absolute z-20 bg-lighter top-0 left-0 h-14 lg:h-20 w-[84px] rounded-br-[60px]"
+            class="absolute z-20 bg-lighter top-0 left-0 h-20 w-12 lg:w-[84px] rounded-br-[60px]"
           ></div>
 
           <div class="absolute z-20 bg-lighter top-0 left-0 h-32 w-7"></div>
@@ -140,7 +142,7 @@
       </div>
 
       <!-- Hero Image -->
-      <div class="w-full h-72 md:h-96 xl:h-[450px] px-8 md:px-16 py-4">
+      <div class="w-full h-72 md:h-96 xl:h-[550px] py-4">
         <div class="relative w-full h-full overflow-hidden">
           <!-- Background Img -->
           <div
@@ -333,9 +335,12 @@
 
     <!-- 3rd Section -->
 
-    <section id="services" class="flex flex-col px-2 sm:px-16">
+    <section
+      id="services"
+      class="flex flex-col px-2 h-[700px] sm:px-16 xl:px-32 2xl:px-42 xl:h-[1000px]"
+    >
       <div
-        class="flex flex-col space-x-4 sm:px-16 w-full h-full xl:mt-28 items-center"
+        class="flex flex-col space-x-4 sm:px-16 w-full xl:mt-28 items-center"
       >
         <div
           class="flex flex-col justify-center items-center w-full md:text-2xl xl:text-4xl space-y-2 py-4 px-6"
@@ -350,17 +355,92 @@
           >
         </div>
       </div>
+
+      <!-- 3 sub sections -->
       <div
-        class="flex flex-col md:flex-row w-full h-full justify-center items-center sm:justify-evenly mt-10 space-y-8 sm:space-y-0"
+        class="flex flex-col md:flex-row w-full h-full justify-center items-center sm:justify-evenly mt-10 space-y-2 sm:space-y-0"
       >
+        <!-- 1 -->
         <div
-          class="flex flex-col w-full md:w-1/4 xl:w-1/5 items-center sm:items-start"
+          class="flex flex-col px-3 self-start w-full h-72 xl:h-96 md:w-5/12 items-center sm:items-start"
         >
-          <img
+          <!-- Clip Img -->
+
+          <div class="relative w-full h-full">
+            <!-- Img -->
+
+            <div class="absolute inset-0 rounded-3xl overflow-hidden">
+              <img
+                class="h-full object-cover w-full"
+                src="src/img/img1.jpg"
+                alt=""
+              />
+            </div>
+
+            <div
+              class="absolute z-20 h-full w-[calc(100%-56px)] lg:w-[calc(100%-80px)] rounded-3xl overflow-hidden"
+            >
+              <div class="h-full w-[calc(100%+56px)] lg:w-[calc(100%+80px)]">
+                <img
+                  class="h-full object-cover w-full"
+                  src="src/img/img1.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div
+              class="absolute bottom-0 z-30 h-[calc(100%-56px)] lg:h-[calc(100%-80px)] w-full rounded-3xl overflow-hidden"
+            >
+              <div class="h-[calc(100%+56px)] lg:h-[calc(100%+80px)] w-full">
+                <img
+                  class="w-full h-full object-cover transform -translate-y-[56px] lg:-translate-y-[80px]"
+                  src="src/img/img1.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div
+              class="absolute z-10 top-0 right-0 h-14 w-14 lg:h-20 lg:w-20 bg-lighter rounded-bl-3xl"
+            >
+              <div class="w-full h-full pl-3 pb-3">
+                <div class="bg-black w-full h-full rounded-full p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="fill-white"
+                    viewBox="0 -960 960 960"
+                  >
+                    <path
+                      d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="absolute z-10 top-0 right-14 lg:right-20 h-14 w-14 lg:h-20 lg:w-20 bg-lighter rounded-bl-3xl"
+            ></div>
+
+            <div
+              class="absolute z-10 top-14 lg:top-20 right-0 h-14 w-14 lg:h-20 lg:w-20 bg-lighter rounded-bl-3xl"
+            ></div>
+
+            <!-- <img
             class="object-contain"
             src="./src/img/wireframing/wireframing.png"
             alt=""
-          />
+          /> -->
+
+            <!-- White Spaces -->
+          </div>
+
+          <!-- <img
+            class="object-contain"
+            src="./src/img/wireframing/wireframing.png"
+            alt=""
+          /> -->
           <span class="xl:text-xl font-semibold">Web Design Services</span>
           <span
             class="text-xs xl:text-base text-gray-500 text-center sm:text-start"
@@ -369,13 +449,68 @@
           >
         </div>
 
-        <div class="flex flex-col w-full h-full md:w-1/3 items-start relative">
-          <img
-            class="object-fill mb-10 sm:mb-0 md:mb-2 md:ms-4 lg:mb-4 xl:mb-0"
-            src="./src/img/wireframing/team.png"
-            alt=""
-          />
+        <!-- 2 -->
+
+        <div
+          class="flex px-3 flex-col w-full h-full md:w-6/12 items-start relative"
+        >
+          <!-- Img -->
+          <div class="absolute inset-0 rounded-3xl overflow-hidden">
+            <img
+              class="w-full h-full object-cover"
+              src="./src/img/img1.jpg"
+              alt=""
+            />
+          </div>
+
           <div
+            class="absolute h-full w-1/4 right-0 bottom-0 z-20 rounded-3xl overflow-hidden"
+          >
+            <div class="w-[400%] h-full transform -translate-x-[75%]">
+              <img
+                class="w-full h-full object-cover"
+                src="./src/img/img1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div
+            class="absolute h-[calc(100%-40px)] w-full right-0 top-0 z-20 rounded-3xl overflow-hidden"
+          >
+            <div class="w-full h-[calc(100%+40px)]">
+              <img
+                class="w-full h-full object-cover"
+                src="./src/img/img1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <!-- White boxes -->
+
+          <div
+            class="z-30 absolute h-10 w-3/4 bg-lighter rounded-tr-3xl bottom-0 left-0"
+          >
+            <div class="pt-2 pr-2 w-full h-full">
+              <div
+                class="flex items-center justify-center border border-stone-800 w-full h-full py-2 px-1 rounded-full"
+              >
+                <strong class="text-stone-80"
+                  >Stand Out in the Digital World</strong
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute h-16 w-1/4 bg-lighter rounded-tr-3xl bottom-0 left-0"
+          ></div>
+
+          <div
+            class="absolute h-5 w-1/4 bg-lighter rounded-tr-3xl bottom-0 left-3/4"
+          ></div>
+
+          <!-- <div
             class="flex flex-col absolute bottom-0 md:-bottom-10 lg:-bottom-5 xl:-bottom-10"
           >
             <span class="xl:text-xl font-semibold">Web Development</span>
@@ -383,23 +518,88 @@
               >Our talented team bring ideas to life and create robust
               website</span
             >
-          </div>
+          </div> -->
         </div>
 
+        <!-- 3 -->
         <div
-          class="mt-20 md:self-start flex flex-col w-full md:w-1/5 items-center sm:items-start"
+          class="flex flex-col px-3 self-end w-full h-96 xl:h-[450px] md:w-5/12 items-center sm:items-start"
         >
-          <img
-            class="object-cover"
-            src="./src/img/wireframing/developer.png"
-            alt=""
-          />
           <span class="xl:text-xl font-semibold">Website Maintenance</span>
           <span
             class="text-xs xl:text-base text-gray-500 text-center sm:text-start"
             >We offer continuous support for your website's smooth
             operation.</span
           >
+          <div class="relative w-full h-full">
+            <!-- Img -->
+
+            <div class="absolute inset-0 rounded-3xl overflow-hidden">
+              <img
+                class="h-full object-cover w-full"
+                src="src/img/img1.jpg"
+                alt=""
+              />
+            </div>
+
+            <div
+              class="absolute z-20 h-full w-[calc(100%-56px)] lg:w-[calc(100%-80px)] rounded-3xl overflow-hidden"
+            >
+              <div class="h-full w-[calc(100%+56px)] lg:w-[calc(100%+80px)]">
+                <img
+                  class="h-full object-cover w-full"
+                  src="src/img/img1.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div
+              class="absolute bottom-0 z-30 h-[calc(100%-56px)] lg:h-[calc(100%-80px)] w-full rounded-3xl overflow-hidden"
+            >
+              <div class="h-[calc(100%+56px)] lg:h-[calc(100%+80px)] w-full">
+                <img
+                  class="w-full h-full object-cover transform -translate-y-[56px] lg:-translate-y-[80px]"
+                  src="src/img/img1.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div
+              class="absolute z-10 top-0 right-0 h-14 w-14 lg:h-20 lg:w-20 bg-lighter rounded-bl-3xl"
+            >
+              <div class="w-full h-full pl-3 pb-3">
+                <div class="bg-black w-full h-full rounded-full p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="fill-white"
+                    viewBox="0 -960 960 960"
+                  >
+                    <path
+                      d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="absolute z-10 top-0 right-14 lg:right-20 h-14 w-14 lg:h-20 lg:w-20 bg-lighter rounded-bl-3xl"
+            ></div>
+
+            <div
+              class="absolute z-10 top-14 lg:top-20 right-0 h-14 w-14 lg:h-20 lg:w-20 bg-lighter rounded-bl-3xl"
+            ></div>
+
+            <!-- <img
+            class="object-contain"
+            src="./src/img/wireframing/wireframing.png"
+            alt=""
+          /> -->
+
+            <!-- White Spaces -->
+          </div>
         </div>
       </div>
     </section>
@@ -617,63 +817,163 @@
       <div
         class="flex flex-col sm:flex-row sm:mt-20 justify-between py-4 px-6 space-y-2 sm:space-y-0 sm:space-x-4"
       >
-        <div class="md:w-1/3 hover:scale-95 cursor-pointer">
-          <div class="w-full h-96 p-6">
-            <div class="relative w-full h-full overflow-hidden rounded-[60px]">
-              <img
-                src="./src/img/img1.jpg"
-                class="z-10 absolute inset-0 object-cover w-full"
-                style="height: calc(100% - 5rem); width: calc(100% - 5rem)"
-                alt=""
-              />
+        <!-- Div 1 -->
+        <div class="md:w-72 xl:w-96 cursor-pointer">
+          <div class="w-full h-72 xl:h-96">
+            <!-- Img -->
+            <div class="relative w-full h-full overflow-hidden">
               <div
-                class="z-40 rounded-br-[60px] absolute top-0 left-0 h-full bg-transparent content-normal overflow-hidden"
-                style="width: calc(100% - 9rem)"
+                class="absolute content-normal inset-0 rounded-[60px] overflow-hidden"
               >
                 <img
+                  class="w-full h-full object-cover"
                   src="./src/img/img1.jpg"
-                  class="absolute top-0 left-0 object-cover h-full"
-                  style="width: calc(100% + 288px)"
-                  alt=""
-                />
-              </div>
-              <div
-                class="z-30 rounded-br-[60px] absolute top-0 left-0 w-full bg-transparent content-normal overflow-hidden"
-                style="height: calc(100% - 9rem)"
-              >
-                <img
-                  src="./src/img/img1.jpg"
-                  class="absolute inset-0 object-cover w-full"
-                  style="height: calc(100% + 9rem)"
                   alt=""
                 />
               </div>
 
               <div
-                class="z-40 rounded-tl-[60px] absolute bottom-0 right-0 h-36 w-36 bg-white content-normal"
+                class="z-30 absolute w-full content-normal h-48 xl:h-60 top-0 left-0 rounded-[60px] overflow-hidden"
+              >
+                <img
+                  class="w-full h-72 xl:h-96 object-cover"
+                  src="./src/img/img1.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div
+                class="z-30 absolute md:w-48 xl:w-60 content-normal top-0 left-0 rounded-[60px] overflow-hidden"
+              >
+                <div class="relative md:w-72 xl:w-96 h-72 xl:h-96">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="./src/img/img1.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <!-- White Spaces -->
+              <div
+                class="absolute content-normal bottom-0 right-0 bg-lighter h-24 w-24 xl:h-36 xl:w-36 rounded-tl-[40px]"
               ></div>
 
               <div
-                class="z-20 rounded-br-[60px] absolute bottom-0 right-36 h-36 w-36 bg-white content-normal"
+                class="absolute content-normal bottom-24 xl:bottom-36 right-0 bg-lighter h-24 w-24 xl:h-36 xl:w-36 rounded-tl-[40px]"
+              ></div>
+
+              <div
+                class="absolute content-normal bottom-0 right-24 xl:right-36 bg-lighter h-24 w-24 xl:h-36 xl:w-36 rounded-tl-[40px]"
               ></div>
             </div>
           </div>
         </div>
-        <div class="md:w-1/3 hover:scale-95 cursor-pointer">
-          <a target="main1" href="https://itmsp.netlify.app/"
-            ><img
-              class="object-contain"
-              src="./src/img/portfolio/msp.png"
-              alt=""
-          /></a>
+
+        <!-- Div 2 -->
+        <div class="md:w-72 xl:w-96 cursor-pointer">
+          <div class="w-full h-72 xl:h-96">
+            <!-- Img -->
+            <div class="relative w-full h-full overflow-hidden">
+              <div
+                class="absolute content-normal inset-0 rounded-[60px] overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="./src/img/img1.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div
+                class="z-30 absolute w-full content-normal h-48 xl:h-60 top-0 left-0 rounded-[60px] overflow-hidden"
+              >
+                <img
+                  class="w-full h-72 xl:h-96 object-cover"
+                  src="./src/img/img1.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div
+                class="z-30 absolute md:w-48 xl:w-60 content-normal top-0 left-0 rounded-[60px] overflow-hidden"
+              >
+                <div class="relative md:w-72 xl:w-96 h-72 xl:h-96">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="./src/img/img1.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <!-- White Spaces -->
+              <div
+                class="absolute content-normal bottom-0 right-0 bg-lighter h-24 w-24 xl:h-36 xl:w-36 rounded-tl-[40px]"
+              ></div>
+
+              <div
+                class="absolute content-normal bottom-24 xl:bottom-36 right-0 bg-lighter h-24 w-24 xl:h-36 xl:w-36 rounded-tl-[40px]"
+              ></div>
+
+              <div
+                class="absolute content-normal bottom-0 right-24 xl:right-36 bg-lighter h-24 w-24 xl:h-36 xl:w-36 rounded-tl-[40px]"
+              ></div>
+            </div>
+          </div>
         </div>
-        <div class="md:w-1/3 hover:scale-95 cursor-pointer">
-          <a target="main2" href="https://samplecakeshop.netlify.app/"
-            ><img
-              class="object-contain"
-              src="./src/img/portfolio/cake.png"
-              alt=""
-          /></a>
+
+        <!-- Div 3 -->
+        <div class="md:w-72 xl:w-96 cursor-pointer">
+          <div class="w-full h-72 xl:h-96">
+            <!-- Img -->
+            <div class="relative w-full h-full overflow-hidden">
+              <div
+                class="absolute content-normal inset-0 rounded-[60px] overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="./src/img/img1.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div
+                class="z-30 absolute w-full content-normal h-48 xl:h-60 top-0 left-0 rounded-[60px] overflow-hidden"
+              >
+                <img
+                  class="w-full h-72 xl:h-96 object-cover"
+                  src="./src/img/img1.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div
+                class="z-30 absolute md:w-48 xl:w-60 content-normal top-0 left-0 rounded-[60px] overflow-hidden"
+              >
+                <div class="md:w-72 xl:w-96 h-72 xl:h-96">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="./src/img/img1.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <!-- White Spaces -->
+              <div
+                class="absolute content-normal bottom-0 right-0 bg-lighter h-24 w-24 xl:h-36 xl:w-36 rounded-tl-[40px]"
+              ></div>
+
+              <div
+                class="absolute content-normal bottom-24 xl:bottom-36 right-0 bg-lighter h-24 w-24 xl:h-36 xl:w-36 rounded-tl-[40px]"
+              ></div>
+
+              <div
+                class="absolute content-normal bottom-0 right-24 xl:right-36 bg-lighter h-24 w-24 xl:h-36 xl:w-36 rounded-tl-[40px]"
+              ></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
