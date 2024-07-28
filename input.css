@@ -21,3 +21,22 @@
   animation: scrollUp 5s linear forwards; /* Adjust duration as needed */
   object-fit: cover; /* Ensure object-fit is set for proper alignment */
 }
+
+/* Sections */
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.section {
+  transition: all 0.8s ease-out;
+}
+
+.text-size {
+  @apply text-2xl;
+}
+
+.active {
+  @apply text-red-600;
+}
