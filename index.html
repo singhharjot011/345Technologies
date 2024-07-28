@@ -43,55 +43,120 @@
   </head>
   <body class="bg-lighter">
     <header
-      class="flex h-16 w-full justify-between overflow-hidden px-8 py-4 text-center md:px-16"
+      class="relative flex w-full px-8 py-4 text-center md:overflow-hidden md:px-16"
     >
-      <!-- Logo -->
-      <div class="flex items-center gap-1">
-        <img class="h-8" src="./public/assets/img/logo/logo.png" alt="" /><span
-          class="text-nowrap font-semibold text-stone-800"
-          >rban Web Pixels</span
-        >
-      </div>
-
-      <!-- Navbar -->
-      <ul
-        id="navbar-links-menu"
-        class="flex w-full items-center justify-center space-x-12 font-semibold text-stone-800"
+      <nav
+        class="relative z-50 flex h-12 w-full flex-col items-center justify-between md:h-max md:flex-row md:items-start md:justify-center"
       >
-        <li>
-          <a href="index.html" class="nav-link hover:text-stone-500">Home</a>
-        </li>
-        <li>
-          <a href="#" class="nav-link hover:text-stone-500">Work</a>
-        </li>
-        <li>
-          <a href="#" class="nav-link hover:text-stone-500">About</a>
-        </li>
-        <li>
-          <a href="#" class="nav-link hover:text-stone-500">Services</a>
-        </li>
-        <li>
-          <a href="#" class="nav-link text-nowrap hover:text-stone-500"
-            >Contact</a
+        <!-- Logo -->
+        <div class="flex h-full items-center gap-1 self-start">
+          <img
+            class="h-8"
+            src="./public/assets/img/logo/logo.png"
+            alt=""
+          /><span class="text-nowrap font-semibold text-stone-800"
+            >rban Web Pixels</span
           >
-        </li>
-      </ul>
+        </div>
 
-      <!-- Buttons -->
-      <button
-        aria-label="get-quote"
-        class="py-1/2 group flex items-center gap-2 rounded-full border border-stone-800 px-2 text-stone-800 backdrop-blur-lg backdrop-opacity-70 hover:bg-stone-800 hover:text-stone-100 active:scale-95"
-      >
-        <span class="text-nowrap"> Get Quote</span>
+        <!-- Navbar -->
 
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 -960 960 960"
-          class="h-4 w-4 fill-stone-800 group-hover:fill-stone-100"
+        <ul
+          id="navbar-links-menu"
+          class="hidden h-full w-full items-center justify-center space-x-12 font-semibold text-stone-800 md:flex"
         >
-          <path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" />
-        </svg>
-      </button>
+          <li>
+            <a href="index.html" class="nav-link hover:text-stone-500">Home</a>
+          </li>
+          <li>
+            <a href="#" class="nav-link hover:text-stone-500">Work</a>
+          </li>
+          <li>
+            <a href="#" class="nav-link hover:text-stone-500">About</a>
+          </li>
+          <li>
+            <a href="#" class="nav-link hover:text-stone-500">Services</a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-nowrap hover:text-stone-500"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <!-- Buttons -->
+        <div class="flex h-full items-center justify-center">
+          <button
+            aria-label="get-quote"
+            class="py-1/2 group hidden items-center gap-2 rounded-full border border-stone-800 px-2 text-stone-800 backdrop-blur-lg backdrop-opacity-70 hover:bg-stone-800 hover:text-stone-100 active:scale-95 md:flex"
+          >
+            <span class="text-nowrap"> Get Quote</span>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              class="h-4 w-4 fill-stone-800 group-hover:fill-stone-100"
+            >
+              <path
+                d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Expanded Navbar -->
+        <div
+          id="expanded-navbar"
+          class="bg-whiteAlternate absolute left-0 top-14 hidden w-full flex-col px-2 text-center sm:px-8 md:hidden"
+        >
+          <div
+            class="border-b border-darkText/40 bg-lighter p-2 font-semibold text-stone-800"
+          >
+            <a href="index.html" class="nav-link hover:text-stone-500">Home</a>
+          </div>
+          <div
+            class="border-b border-darkText/40 bg-lighter p-2 font-semibold text-stone-800"
+          >
+            <a href="#work" class="nav-link hover:text-stone-500">Work</a>
+          </div>
+          <div
+            class="border-b border-darkText/40 bg-lighter p-2 font-semibold text-stone-800"
+          >
+            <a href="#about" class="nav-link hover:text-stone-500">About</a>
+          </div>
+          <div
+            class="border-b border-darkText/40 bg-lighter p-2 font-semibold text-stone-800"
+          >
+            <a href="#services" class="nav-link hover:text-stone-500"
+              >Services</a
+            >
+          </div>
+          <div
+            class="border-b border-darkText/40 bg-lighter p-2 font-semibold text-stone-800"
+          >
+            <a href="#contact" class="nav-link hover:text-stone-500">Contact</a>
+          </div>
+        </div>
+
+        <!-- Toggle Button -->
+        <div class="absolute right-12 top-1/3 flex items-center md:hidden">
+          <input type="checkbox" id="menu-toggle" class="hidden" />
+          <label for="menu-toggle" class="cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 fill-black stroke-black"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </label>
+        </div>
+      </nav>
     </header>
 
     <!-- Hero Section -->
@@ -334,12 +399,12 @@
 
     <section
       id="specialization"
-      class="mt-5 flex h-40 flex-col bg-light bg-opacity-70 px-10 sm:px-16 lg:h-60 xl:mt-12 xl:px-32 2xl:mt-32 2xl:px-40"
+      class="mt-5 flex h-max flex-col bg-light bg-opacity-70 px-10 sm:px-16 lg:h-60 xl:mt-12 xl:px-32 2xl:mt-32 2xl:px-40"
     >
       <div
         class="mt-3 flex flex-col space-y-1 text-center text-blackAlternate text-opacity-90 md:mt-10"
       >
-        <span class="text-xs font-semibold md:text-base lg:text-xl"
+        <span class="text-base font-semibold lg:text-xl"
           >More than 10 businesses have entrusted us nation wide.</span
         >
         <span class="text-xs lg:text-base"
@@ -377,12 +442,12 @@
         class="flex w-full flex-col items-center space-x-4 sm:px-16 xl:mt-28"
       >
         <div
-          class="flex w-full flex-col items-center justify-center space-y-2 px-6 py-4 md:text-2xl xl:text-4xl"
+          class="flex w-full flex-col items-center justify-center space-y-2 py-4 md:text-2xl xl:text-4xl"
         >
           <span class="font-semibold">Transforming Businesses with </span>
           <span class="font-semibold"> Innovative Web Solutions</span>
         </div>
-        <div class="w-2/3 text-center text-xs lg:text-base xl:w-1/3 xl:text-xl">
+        <div class="text-center text-xs md:w-2/3 lg:text-base xl:text-xl">
           <span
             >Our tailored solutions encompass a comprehensive range of web
             design, development, and maintenance services</span
@@ -392,7 +457,7 @@
 
       <!-- 3 sub sections -->
       <div
-        class="mt-10 flex h-full w-full flex-col items-center justify-center space-y-2 sm:justify-evenly sm:space-y-0 md:flex-row"
+        class="mt-10 flex h-full w-full flex-col items-center justify-center space-y-8 sm:justify-evenly md:flex-row"
       >
         <!-- 1 -->
         <div
@@ -403,10 +468,12 @@
           <div class="relative h-full w-full">
             <!-- Img -->
 
-            <div class="absolute inset-0 overflow-hidden rounded-3xl">
+            <div
+              class="absolute inset-0 overflow-hidden rounded-3xl drop-shadow-sm"
+            >
               <img
                 class="h-full w-full object-cover"
-                src="public/assets/img/sectional/designer1.jpg"
+                src="public/assets/img/person/work.jpeg"
                 alt=""
               />
             </div>
@@ -417,7 +484,7 @@
               <div class="h-full w-[calc(100%+56px)] lg:w-[calc(100%+80px)]">
                 <img
                   class="h-full w-full object-cover"
-                  src="public/assets/img/sectional/designer1.jpg"
+                  src="public/assets/img/person/work.jpeg"
                   alt=""
                 />
               </div>
@@ -429,7 +496,7 @@
               <div class="h-[calc(100%+56px)] w-full lg:h-[calc(100%+80px)]">
                 <img
                   class="h-full w-full -translate-y-[56px] transform object-cover lg:-translate-y-[80px]"
-                  src="public/assets/img/sectional/designer1.jpg"
+                  src="public/assets/img/person/work.jpeg"
                   alt=""
                 />
               </div>
@@ -478,10 +545,10 @@
           class="relative flex h-72 w-full flex-col items-start px-3 md:h-full md:w-6/12"
         >
           <!-- Img -->
-          <div class="absolute inset-0 overflow-hidden rounded-3xl">
+          <div class="absolute inset-0 overflow-hidden rounded-3xl shadow-sm">
             <img
               class="h-full w-full object-cover"
-              src="./src/img/img1.jpg"
+              src="public/assets/img/person/mid.jpeg"
               alt=""
             />
           </div>
@@ -492,7 +559,7 @@
             <div class="h-full w-[400%] -translate-x-[75%] transform">
               <img
                 class="h-full w-full object-cover"
-                src="./src/img/img1.jpg"
+                src="public/assets/img/person/mid.jpeg"
                 alt=""
               />
             </div>
@@ -504,7 +571,7 @@
             <div class="h-[calc(100%+40px)] w-full">
               <img
                 class="h-full w-full object-cover"
-                src="./src/img/img1.jpg"
+                src="public/assets/img/person/mid.jpeg"
                 alt=""
               />
             </div>
@@ -540,7 +607,7 @@
         >
           <span class="font-semibold xl:text-xl">Website Maintenance</span>
           <span
-            class="text-center text-xs text-gray-500 sm:text-start xl:text-base"
+            class="mb-5 text-center text-xs text-gray-500 sm:text-start md:mb-3 xl:text-base"
             >We offer continuous support for your website's smooth
             operation.</span
           >
@@ -630,18 +697,18 @@
               class="flex w-2/3 flex-col items-center justify-center space-y-3 sm:flex sm:flex-row sm:space-y-0"
             >
               <span
-                class="text-center text-xs text-blackAlternate text-opacity-80 sm:w-2/3 sm:text-start lg:text-sm"
-                >At 345 Technologies, we offer tailored web development
-                solutions in six simple steps. Our skilled developers
-                collaborate closely with clients to craft impactful websites
-                that deliver results.
+                class="px-2 text-center text-base text-blackAlternate text-opacity-80 sm:w-2/3 sm:text-start lg:text-lg"
+                >At <strong>Urban Web Pixels</strong>, we offer tailored web
+                development solutions in six simple steps. Our skilled
+                developers collaborate closely with clients to craft impactful
+                websites that deliver results.
               </span>
 
               <div class="sm:w-1/4">
                 <button
-                  class="flex items-center justify-center space-x-1 rounded-lg bg-transparent px-1 ring-1 ring-blackAlternate hover:scale-105 hover:bg-light md:px-2 md:py-0 lg:py-1"
+                  class="flex items-center justify-center space-x-1 rounded-lg bg-transparent px-2 ring-1 ring-blackAlternate hover:scale-105 hover:bg-light md:py-0 lg:py-1"
                 >
-                  <span class="whitespace-nowrap text-xs md:text-base"
+                  <span class="whitespace-nowrap text-xs sm:text-base"
                     >See our Work</span
                   >
                   <img
@@ -879,19 +946,106 @@
       >
         <!-- Div 1 -->
         <div
-          class="flex aspect-square w-2/3 flex-col items-center px-3 sm:items-start md:w-1/3"
+          class="ltw flex aspect-square w-2/3 flex-col items-center px-3 sm:items-start md:w-1/3"
         >
           <!-- Clip Img -->
 
-          <div class="relative h-full w-full">
+          <div class="group relative h-full w-full cursor-pointer">
             <!-- Img -->
 
             <div class="absolute inset-0 overflow-hidden rounded-3xl">
               <img
-                class="h-full w-full object-cover"
-                src="src/img/img1.jpg"
+                class="h-full w-full object-cover object-top"
+                src="public/assets/work/medicrest-pharmacy/frame.png"
+                data-frame="public/assets/work/medicrest-pharmacy/full-screenshot.png"
                 alt=""
               />
+            </div>
+
+            <!-- Content -->
+
+            <div
+              class="ltw-content absolute z-40 h-full w-full rounded-3xl group-hover:cursor-pointer"
+            >
+              <div
+                class="relative h-1/2 w-full rounded-t-3xl bg-gradient-to-b from-black/20 to-transparent backdrop-blur-sm"
+              >
+                <div
+                  class="absolute left-2 top-4 flex w-max items-center justify-center rounded-full border bg-purple-950/75 px-2 py-1 text-stone-100 backdrop-blur-sm"
+                >
+                  <span class="text-nowrap text-xs lg:text-base"
+                    >Medicrest Pharmacy</span
+                  >
+                </div>
+
+                <div class="absolute left-2 top-16 flex w-full flex-wrap gap-1">
+                  <div
+                    class="/80 flex w-max items-center justify-center rounded-full border border-black bg-white/10 px-2 py-1 text-black backdrop-blur-sm"
+                  >
+                    <span class="flex text-nowrap text-xs font-semibold"
+                      >Web Design
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 fill-purple-900"
+                        viewBox="0 -960 960 960"
+                      >
+                        <path
+                          d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <div
+                    class="/80 flex w-max items-center justify-center rounded-full border border-black bg-white/10 px-2 py-1 text-black backdrop-blur-sm"
+                  >
+                    <span class="flex text-nowrap text-xs font-semibold"
+                      >Content Writing
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 fill-purple-900"
+                        viewBox="0 -960 960 960"
+                      >
+                        <path
+                          d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    class="/80 flex w-max items-center justify-center rounded-full border border-black bg-white/10 px-2 py-1 text-black backdrop-blur-sm"
+                  >
+                    <span class="flex text-nowrap text-xs font-semibold"
+                      >SEO
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 fill-purple-900"
+                        viewBox="0 -960 960 960"
+                      >
+                        <path
+                          d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    class="/80 flex w-max items-center justify-center rounded-full border border-black bg-white/10 px-2 py-1 text-black backdrop-blur-sm"
+                  >
+                    <span class="flex text-nowrap text-xs font-semibold"
+                      >Hosting
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 fill-purple-900"
+                        viewBox="0 -960 960 960"
+                      >
+                        <path
+                          d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div
@@ -899,8 +1053,9 @@
             >
               <div class="h-full w-[calc(100%+56px)] lg:w-[calc(100%+80px)]">
                 <img
-                  class="h-full w-full object-cover"
-                  src="src/img/img1.jpg"
+                  class="h-full w-full object-cover object-top"
+                  src="public/assets/work/medicrest-pharmacy/frame.png"
+                  data-frame="public/assets/work/medicrest-pharmacy/full-screenshot.png"
                   alt=""
                 />
               </div>
@@ -911,27 +1066,34 @@
             >
               <div class="h-[calc(100%+56px)] w-full lg:h-[calc(100%+80px)]">
                 <img
-                  class="h-full w-full transform object-cover"
-                  src="src/img/img1.jpg"
+                  class="h-full w-full object-cover object-top"
+                  src="public/assets/work/medicrest-pharmacy/frame.png"
+                  data-frame="public/assets/work/medicrest-pharmacy/full-screenshot.png"
                   alt=""
                 />
               </div>
             </div>
             <!-- White Spaces -->
             <div
-              class="absolute bottom-0 right-0 z-10 h-14 w-14 rounded-tl-3xl bg-lighter lg:h-20 lg:w-20"
+              class="absolute bottom-0 right-0 z-50 h-14 w-14 rounded-tl-3xl bg-lighter lg:h-20 lg:w-20"
             >
               <div class="h-full w-full pl-3 pt-3">
-                <div class="h-full w-full rounded-full bg-black p-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="fill-white"
-                    viewBox="0 -960 960 960"
-                  >
-                    <path
-                      d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
-                    />
-                  </svg>
+                <div class="h-full w-full pl-3 pt-3">
+                  <a href="https://www.medicrestpharmacy.com/" target="_blank">
+                    <div
+                      class="h-full w-full rounded-full bg-black p-3 hover:scale-110"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="fill-white"
+                        viewBox="0 -960 960 960"
+                      >
+                        <path
+                          d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
+                        />
+                      </svg>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -948,19 +1110,104 @@
 
         <!-- Div 2 -->
         <div
-          class="flex aspect-square w-2/3 flex-col items-center px-3 sm:items-start md:w-1/3"
+          class="ltw flex aspect-square w-2/3 flex-col items-center px-3 sm:items-start md:w-1/3"
         >
           <!-- Clip Img -->
 
-          <div class="relative h-full w-full">
+          <div class="group relative h-full w-full cursor-pointer">
             <!-- Img -->
 
             <div class="absolute inset-0 overflow-hidden rounded-3xl">
               <img
-                class="h-full w-full object-cover"
-                src="src/img/img1.jpg"
+                class="h-full w-full cursor-pointer object-cover"
+                src="public/assets/work/woodlawn-pharmacy/frame.png"
+                data-frame="public/assets/work/woodlawn-pharmacy/full-screenshot.png"
                 alt=""
               />
+            </div>
+
+            <!-- Content -->
+
+            <div class="ltw-content absolute z-40 h-full w-full">
+              <div
+                class="relative h-1/2 w-full rounded-t-3xl bg-gradient-to-b from-black/20 to-transparent backdrop-blur-sm"
+              >
+                <div
+                  class="absolute left-2 top-4 flex w-max items-center justify-center rounded-full border bg-green-700/75 px-2 py-1 text-stone-100 backdrop-blur-sm"
+                >
+                  <span class="text-nowrap text-xs lg:text-base"
+                    >Woodlawn Pharmacy</span
+                  >
+                </div>
+
+                <div class="absolute left-2 top-16 flex w-full flex-wrap gap-1">
+                  <div
+                    class="/80 flex w-max items-center justify-center rounded-full border border-black bg-white/10 px-2 py-1 text-black backdrop-blur-sm"
+                  >
+                    <span class="flex text-nowrap text-xs font-semibold"
+                      >Web Design
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 fill-purple-900"
+                        viewBox="0 -960 960 960"
+                      >
+                        <path
+                          d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <div
+                    class="/80 flex w-max items-center justify-center rounded-full border border-black bg-white/10 px-2 py-1 text-black backdrop-blur-sm"
+                  >
+                    <span class="flex text-nowrap text-xs font-semibold"
+                      >Web Development
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 fill-purple-900"
+                        viewBox="0 -960 960 960"
+                      >
+                        <path
+                          d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    class="/80 flex w-max items-center justify-center rounded-full border border-black bg-white/10 px-2 py-1 text-black backdrop-blur-sm"
+                  >
+                    <span class="flex text-nowrap text-xs font-semibold"
+                      >SEO
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 fill-purple-900"
+                        viewBox="0 -960 960 960"
+                      >
+                        <path
+                          d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    class="/80 flex w-max items-center justify-center rounded-full border border-black bg-white/10 px-2 py-1 text-black backdrop-blur-sm"
+                  >
+                    <span class="flex text-nowrap text-xs font-semibold"
+                      >Hosting
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 fill-purple-900"
+                        viewBox="0 -960 960 960"
+                      >
+                        <path
+                          d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div
@@ -968,8 +1215,9 @@
             >
               <div class="h-full w-[calc(100%+56px)] lg:w-[calc(100%+80px)]">
                 <img
-                  class="h-full w-full object-cover"
-                  src="src/img/img1.jpg"
+                  class="h-full w-full cursor-pointer object-cover"
+                  src="public/assets/work/woodlawn-pharmacy/frame.png"
+                  data-frame="public/assets/work/woodlawn-pharmacy/full-screenshot.png"
                   alt=""
                 />
               </div>
@@ -980,8 +1228,9 @@
             >
               <div class="h-[calc(100%+56px)] w-full lg:h-[calc(100%+80px)]">
                 <img
-                  class="h-full w-full transform object-cover"
-                  src="src/img/img1.jpg"
+                  class="h-full w-full cursor-pointer object-cover"
+                  src="public/assets/work/woodlawn-pharmacy/frame.png"
+                  data-frame="public/assets/work/woodlawn-pharmacy/full-screenshot.png"
                   alt=""
                 />
               </div>
@@ -991,17 +1240,24 @@
               class="absolute bottom-0 right-0 z-10 h-14 w-14 rounded-tl-3xl bg-lighter lg:h-20 lg:w-20"
             >
               <div class="h-full w-full pl-3 pt-3">
-                <div class="h-full w-full rounded-full bg-black p-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="fill-white"
-                    viewBox="0 -960 960 960"
+                <a
+                  href="https://woodlawn-pharmacy.netlify.app/"
+                  target="_blank"
+                >
+                  <div
+                    class="h-full w-full rounded-full bg-black p-3 hover:scale-110"
                   >
-                    <path
-                      d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
-                    />
-                  </svg>
-                </div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="fill-white"
+                      viewBox="0 -960 960 960"
+                    >
+                      <path
+                        d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
               </div>
             </div>
 
@@ -1021,15 +1277,100 @@
         >
           <!-- Clip Img -->
 
-          <div class="relative h-full w-full">
+          <div class="ltw relative h-full w-full cursor-pointer">
             <!-- Img -->
 
             <div class="absolute inset-0 overflow-hidden rounded-3xl">
               <img
                 class="h-full w-full object-cover"
-                src="src/img/img1.jpg"
+                src="public/assets/work/immigration-website/frame.png"
+                data-frame="public/assets/work/immigration-website/full-screenshot.png"
                 alt=""
               />
+            </div>
+
+            <!-- Content -->
+
+            <div class="ltw-content absolute z-40 h-full w-full">
+              <div
+                class="relative h-1/2 w-full rounded-t-3xl bg-gradient-to-b from-black/20 to-transparent backdrop-blur-sm"
+              >
+                <div
+                  class="absolute left-2 top-4 flex w-max items-center justify-center rounded-full border bg-rose-900/75 px-2 py-1 text-stone-100 backdrop-blur-sm"
+                >
+                  <span class="text-nowrap text-xs lg:text-base"
+                    >Tailwind Immigration</span
+                  >
+                </div>
+
+                <div class="absolute left-2 top-16 flex w-full flex-wrap gap-1">
+                  <div
+                    class="/80 flex w-max items-center justify-center rounded-full border border-black bg-white/10 px-2 py-1 text-black backdrop-blur-sm"
+                  >
+                    <span class="flex text-nowrap text-xs font-semibold"
+                      >UI/UX
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 fill-purple-900"
+                        viewBox="0 -960 960 960"
+                      >
+                        <path
+                          d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <div
+                    class="/80 flex w-max items-center justify-center rounded-full border border-black bg-white/10 px-2 py-1 text-black backdrop-blur-sm"
+                  >
+                    <span class="flex text-nowrap text-xs font-semibold"
+                      >Development
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 fill-purple-900"
+                        viewBox="0 -960 960 960"
+                      >
+                        <path
+                          d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    class="/80 flex w-max items-center justify-center rounded-full border border-black bg-white/10 px-2 py-1 text-black backdrop-blur-sm"
+                  >
+                    <span class="flex text-nowrap text-xs font-semibold"
+                      >SEO
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 fill-purple-900"
+                        viewBox="0 -960 960 960"
+                      >
+                        <path
+                          d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    class="/80 flex w-max items-center justify-center rounded-full border border-black bg-white/10 px-2 py-1 text-black backdrop-blur-sm"
+                  >
+                    <span class="flex text-nowrap text-xs font-semibold"
+                      >Hosting & Maintenance
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 fill-purple-900"
+                        viewBox="0 -960 960 960"
+                      >
+                        <path
+                          d="M440-120v-264L254-197l-57-57 187-186H120v-80h264L197-706l57-57 186 187v-264h80v264l186-187 57 57-187 186h264v80H576l187 186-57 57-186-187v264h-80Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div
@@ -1037,8 +1378,9 @@
             >
               <div class="h-full w-[calc(100%+56px)] lg:w-[calc(100%+80px)]">
                 <img
-                  class="h-full w-full object-cover"
-                  src="src/img/img1.jpg"
+                  class="h-full w-full cursor-pointer object-cover"
+                  src="public/assets/work/immigration-website/frame.png"
+                  data-frame="public/assets/work/immigration-website/full-screenshot.png"
                   alt=""
                 />
               </div>
@@ -1049,28 +1391,36 @@
             >
               <div class="h-[calc(100%+56px)] w-full lg:h-[calc(100%+80px)]">
                 <img
-                  class="h-full w-full transform object-cover"
-                  src="src/img/img1.jpg"
+                  class="h-full w-full cursor-pointer object-cover"
+                  src="public/assets/work/immigration-website/frame.png"
+                  data-frame="public/assets/work/immigration-website/full-screenshot.png"
                   alt=""
                 />
               </div>
             </div>
             <!-- White Spaces -->
             <div
-              class="absolute bottom-0 right-0 z-10 h-14 w-14 rounded-tl-3xl bg-lighter lg:h-20 lg:w-20"
+              class="absolute bottom-0 right-0 z-50 h-14 w-14 rounded-tl-3xl bg-lighter lg:h-20 lg:w-20"
             >
               <div class="h-full w-full pl-3 pt-3">
-                <div class="h-full w-full rounded-full bg-black p-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="fill-white"
-                    viewBox="0 -960 960 960"
+                <a
+                  href="https://tailwindimmigration.netlify.app/"
+                  target="_blank"
+                >
+                  <div
+                    class="h-full w-full rounded-full bg-black p-3 hover:scale-110"
                   >
-                    <path
-                      d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
-                    />
-                  </svg>
-                </div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="fill-white"
+                      viewBox="0 -960 960 960"
+                    >
+                      <path
+                        d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
               </div>
             </div>
 
@@ -1088,15 +1438,18 @@
 
     <!-- 7th Section -->
 
-    <section id="transform" class="flex justify-center px-2 py-10 sm:px-16">
+    <section
+      id="transform"
+      class="flex justify-center px-10 py-10 sm:my-20 sm:px-16 xl:px-32 2xl:px-40"
+    >
       <div class="relative flex h-[500px] w-full items-center justify-center">
         <!-- Background Img -->
         <div
-          class="absolute inset-0 z-10 h-full overflow-hidden rounded-[60px]"
+          class="absolute inset-0 z-20 h-full overflow-hidden rounded-[60px]"
         >
           <img
             class="h-full w-full object-cover"
-            src="public/assets/img/sectional/temp.jpg"
+            src="public/assets/img/person/bottom-banner.jpeg"
             alt=""
           />
         </div>
@@ -1110,7 +1463,7 @@
           >
             <img
               class="h-full w-full object-cover"
-              src="public/assets/img/sectional/temp.jpg"
+              src="public/assets/img/person/bottom-banner.jpeg"
               alt=""
             />
           </div>
@@ -1124,7 +1477,7 @@
           <div class="h-[calc(100%+128px)] w-full -translate-y-32 transform">
             <img
               class="h-full w-full object-cover"
-              src="public/assets/img/sectional/temp.jpg"
+              src="public/assets/img/person/bottom-banner.jpeg"
               alt=""
             />
           </div>
@@ -1138,7 +1491,7 @@
           <div class="h-full w-[714.2857%] lg:w-[1000%] 2xl:w-[1250%]">
             <img
               class="h-full w-full object-cover"
-              src="public/assets/img/sectional/temp.jpg"
+              src="public/assets/img/person/bottom-banner.jpeg"
               alt=""
             />
           </div>
@@ -1152,7 +1505,7 @@
           >
             <img
               class="h-full w-full object-cover"
-              src="public/assets/img/sectional/temp.jpg"
+              src="public/assets/img/person/bottom-banner.jpeg"
               alt=""
             />
           </div>
@@ -1163,7 +1516,7 @@
           class="absolute bottom-0 left-[12.2%] z-40 flex h-14 w-[calc(34.5%)] items-end justify-center rounded-t-[60px] bg-lighter lg:left-[8.2%] 2xl:left-[6.2%]"
         >
           <div
-            class="rounded-full border-2 border-stone-800 bg-lighter px-2 py-1 text-center text-sm text-stone-800 sm:text-base lg:text-xl xl:text-2xl 2xl:text-3xl"
+            class="rounded-full border-2 border-stone-800 bg-lighter px-2 py-1 text-center text-xs text-stone-800 sm:text-sm lg:text-base xl:text-2xl 2xl:text-3xl"
           >
             Augmented Mastery
           </div>
@@ -1284,7 +1637,7 @@
               <a
                 href="https://345technologies.com"
                 class="text-white hover:underline"
-                >345 Technologies</a
+                >Urban Web Pixels</a
               >
             </span>
             <span class="text-xs">All Rights Reserved.</span>

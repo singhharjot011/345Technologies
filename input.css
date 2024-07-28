@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+@keyframes scrollUp {
+  0% {
+    object-position: top;
+  }
+
+  100% {
+    object-position: bottom;
+  }
+}
+
+/* Apply the animation */
+.scroll-up {
+  animation: scrollUp 5s linear forwards; /* Adjust duration as needed */
+  object-fit: cover; /* Ensure object-fit is set for proper alignment */
+}
