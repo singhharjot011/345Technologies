@@ -2023,6 +2023,10 @@ video {
     height: 100%;
   }
 
+  .md\:h-14 {
+    height: 3.5rem;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2106,6 +2110,11 @@ video {
   .md\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .md\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .md\:pt-0 {
